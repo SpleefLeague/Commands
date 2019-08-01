@@ -270,3 +270,7 @@ commands:
         description: Sets or unsets a checkpoint
         usage: |
           /<command> <target> [x, y, z, yaw, pitch] [duration]
+    hat:
+        description: Puts the item in your hand on your head.
+        usage: |
+          /<command> [remove]
