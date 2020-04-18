@@ -31,21 +31,6 @@ public class virtualblock extends BasicCommand {
     }
 
     @Endpoint(target = {com.spleefleague.annotations.CommandSource.PLAYER, com.spleefleague.annotations.CommandSource.CONSOLE, com.spleefleague.annotations.CommandSource.COMMAND_BLOCK})
-    public void set(CommandSender s, @LiteralArg(value = "set", aliases = {"s"}) String l, @StringArg String name, @IntArg int x, @IntArg int y, @IntArg int z, @IntArg int type) {
-        set(s, l, name, x, y, z, type, 0);
-    }
-
-    @Endpoint(target = {com.spleefleague.annotations.CommandSource.PLAYER, com.spleefleague.annotations.CommandSource.CONSOLE, com.spleefleague.annotations.CommandSource.COMMAND_BLOCK})
-    public void set(CommandSender s, @LiteralArg(value = "set", aliases = {"s"}) String l, @StringArg String name, @IntArg int x, @IntArg int y, @IntArg int z, @IntArg int type, @IntArg int data) {
-        Material m = Material.getMaterial(type);
-        if ((m == null) || (!m.isBlock())) {
-            error(s, type + " is not a valid block id");
-            return;
-        }
-        set(s, name, x, y, z, m, (byte) data);
-    }
-
-    @Endpoint(target = {com.spleefleague.annotations.CommandSource.PLAYER, com.spleefleague.annotations.CommandSource.CONSOLE, com.spleefleague.annotations.CommandSource.COMMAND_BLOCK})
     public void set(CommandSender s, @LiteralArg(value = "set", aliases = {"s"}) String l, @StringArg String name, @IntArg int x, @IntArg int y, @IntArg int z, @StringArg String type) {
         set(s, l, name, x, y, z, type, 0);
     }

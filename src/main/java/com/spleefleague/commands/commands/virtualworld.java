@@ -5,8 +5,6 @@
  */
 package com.spleefleague.commands.commands;
 
-import com.sk89q.worldedit.bukkit.WorldEditPlugin;
-import com.sk89q.worldedit.bukkit.selections.Selection;
 import com.spleefleague.annotations.Endpoint;
 import com.spleefleague.annotations.IntArg;
 import com.spleefleague.annotations.LiteralArg;
@@ -42,23 +40,6 @@ public class virtualworld extends BasicCommand {
     
     public Map<String, FakeWorld> getKnownWorlds() {
         return knownWorlds;
-    }
-
-    @Endpoint(target = {com.spleefleague.annotations.CommandSource.PLAYER})
-    public void create(Player s, @LiteralArg(value = "create", aliases = {"c"}) String l, @StringArg String name) {
-        WorldEditPlugin wep = (WorldEditPlugin) Bukkit.getPluginManager().getPlugin("WorldEdit");
-        Selection selec = wep.getSelection(s);
-        if (selec == null) {
-            error(s, "No area selected");
-            return;
-        }
-        Location min = selec.getMinimumPoint();
-        Location max = selec.getMaximumPoint();
-        if ((min == null) || (max == null)) {
-            error(s, "No area selected");
-            return;
-        }
-        create(s, s.getWorld(), new Area(min.toVector(), max.toVector()), name);
     }
 
     @Endpoint(target = {com.spleefleague.annotations.CommandSource.PLAYER, com.spleefleague.annotations.CommandSource.CONSOLE, com.spleefleague.annotations.CommandSource.COMMAND_BLOCK})

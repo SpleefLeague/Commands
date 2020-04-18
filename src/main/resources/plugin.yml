@@ -4,7 +4,8 @@ description: SpleefLeague Command Plugin
 main: com.spleefleague.commands.Commands
 name: Commands
 url: http://www.spleefleague.com/
-version: 1.1
+version: 1.4
+api-version: 1.13
 commands:
     setrank:
         description: Command to set ranks
@@ -241,11 +242,6 @@ commands:
         description: Server balancing management command.
         usage: |
             /<command> <refresh>
-    globalschematic:
-        description: Builder schematic management command.
-        aliases: [gs]
-        usage: |
-            /<command> <save|load|list> [name]
     broadcast:
         description: Broadcast something server-wide (or locally if need be).
         aliases: [bc]

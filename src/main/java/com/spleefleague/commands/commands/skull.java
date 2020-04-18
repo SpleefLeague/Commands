@@ -21,7 +21,7 @@ public class skull extends BasicCommand {
 
     @Endpoint
     public void skull(Player p, @StringArg String name) {
-        ItemStack give = new ItemStack(Material.SKULL_ITEM);
+        ItemStack give = new ItemStack(Material.PLAYER_HEAD);
         give.setDurability((short) 3);
         SkullMeta skullMeta = (SkullMeta) give.getItemMeta();
         skullMeta.setOwner(name);

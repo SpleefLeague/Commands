@@ -18,10 +18,10 @@ import com.spleefleague.core.utils.DatabaseConnection;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
-import org.apache.commons.lang3.tuple.Pair;
 import org.bson.Document;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.craftbukkit.libs.org.apache.commons.lang3.tuple.Pair;
 
 /**
  *

@@ -15,7 +15,7 @@ import com.spleefleague.core.utils.DatabaseConnection;
 import com.spleefleague.entitybuilder.EntityBuilder;
 import org.bson.Document;
 import org.bukkit.command.CommandSender;
-import org.apache.commons.lang3.tuple.Pair;
+import org.bukkit.craftbukkit.libs.org.apache.commons.lang3.tuple.Pair;
 
 /**
  *

@@ -4,19 +4,9 @@ import static com.spleefleague.annotations.CommandSource.PLAYER;
 import com.spleefleague.annotations.Endpoint;
 import com.spleefleague.annotations.LiteralArg;
 import com.spleefleague.annotations.StringArg;
-import com.spleefleague.core.chat.Theme;
 import com.spleefleague.commands.command.BasicCommand;
 import com.spleefleague.core.player.Rank;
-import com.spleefleague.core.player.SLPlayer;
 import com.spleefleague.core.plugin.CorePlugin;
-import com.spleefleague.core.utils.UtilChat;
-import com.spleefleague.core.utils.fakeentity.FakeCreature;
-import com.spleefleague.core.utils.fakeentity.FakeCreaturesWorker;
-import com.spleefleague.core.utils.fakeentity.FakeNpc;
-import java.lang.reflect.Method;
-import java.util.UUID;
-import org.bukkit.Location;
-import org.bukkit.command.Command;
 import org.bukkit.entity.Player;
 
 /**
@@ -31,6 +21,7 @@ public class fakeentity extends BasicCommand {
 
     @Endpoint(target = {PLAYER})
     public void pending(Player p) {
+        /*
         if (FakeCreaturesWorker.isPending(p) || FakeCreaturesWorker.isWorking(p)) {
             FakeCreaturesWorker.removeWorking(p);
             UtilChat.s(Theme.SUCCESS, p, "You are no longer working with fake creatures.");
@@ -38,10 +29,12 @@ public class fakeentity extends BasicCommand {
             FakeCreaturesWorker.addPending(p);
             UtilChat.s(Theme.SUCCESS, p, "Now you're working with fake creatures. Right click a fake entity to begin.");
         }
+        */
     }
 
     @Endpoint(target = {PLAYER})
     public void spawn(Player p, @LiteralArg(value = "spawn") String l, @StringArg String className, @StringArg String suid, @StringArg String name) {
+        /*
         UUID uuid;
         switch (suid) {
             case "null":
@@ -84,5 +77,6 @@ public class fakeentity extends BasicCommand {
         } catch (Exception ex) {
             UtilChat.s(Theme.ERROR, p, "Unknown fake creature type class.");
         }
+        */
     }
 }

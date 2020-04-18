@@ -4,7 +4,7 @@
   <groupId>com.spleefleague</groupId>
   <artifactId>Commands</artifactId>
   <name>Commands</name>
-  <version>1.2</version>
+  <version>1.4</version>
   <url>http://www.spleefleague.com/</url>
   <build>
     <extensions>
@@ -38,7 +38,7 @@
           <dependency>
             <groupId>com.spleefleague</groupId>
             <artifactId>annotations.processor</artifactId>
-            <version>1.1</version>
+            <version>1.4</version>
             <scope>compile</scope>
             <optional>true</optional>
           </dependency>
@@ -100,28 +100,24 @@
     <dependency>
       <groupId>com.spleefleague</groupId>
       <artifactId>Core</artifactId>
-      <version>1.2</version>
+      <version>1.4</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.spleefleague</groupId>
       <artifactId>GameAPI</artifactId>
-      <version>1.2</version>
+      <version>1.4</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot-api</artifactId>
-      <version>1.12-R0.1-SNAPSHOT</version>
+      <version>1.15.2-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
           <artifactId>commons-lang</artifactId>
           <groupId>commons-lang</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>json-simple</artifactId>
-          <groupId>com.googlecode.json-simple</groupId>
         </exclusion>
         <exclusion>
           <artifactId>guava</artifactId>
@@ -132,44 +128,20 @@
           <groupId>com.google.code.gson</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>snakeyaml</artifactId>
-          <groupId>org.yaml</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>bungeecord-chat</artifactId>
           <groupId>net.md-5</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>snakeyaml</artifactId>
+          <groupId>org.yaml</groupId>
         </exclusion>
       </exclusions>
     </dependency>
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot</artifactId>
-      <version>1.12-R0.1-SNAPSHOT</version>
+      <version>1.15.2-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.sk89q.worldedit</groupId>
-      <artifactId>worldedit-bukkit</artifactId>
-      <version>6.1</version>
-      <scope>provided</scope>
-      <exclusions>
-        <exclusion>
-          <artifactId>dummypermscompat</artifactId>
-          <groupId>com.sk89q</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>bukkit</artifactId>
-          <groupId>org.bukkit</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>worldedit-core</artifactId>
-          <groupId>com.sk89q.worldedit</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>bukkit-classloader-check</artifactId>
-          <groupId>org.sk89q.bukkit</groupId>
-        </exclusion>
-      </exclusions>
     </dependency>
   </dependencies>
   <distributionManagement>
@@ -180,8 +152,8 @@
     </repository>
   </distributionManagement>
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <build.number>unknown</build.number>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 </project>
 

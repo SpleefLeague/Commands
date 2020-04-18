@@ -6,9 +6,9 @@ import com.spleefleague.annotations.IntArg;
 import com.spleefleague.commands.command.BasicCommand;
 import com.spleefleague.core.io.Settings;
 import com.spleefleague.core.plugin.CorePlugin;
-import net.minecraft.server.v1_12_R1.IChatBaseComponent;
+import net.minecraft.server.v1_15_R1.IChatBaseComponent;
 import org.bukkit.ChatColor;
-import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_15_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 public class rules extends BasicCommand {

@@ -89,8 +89,8 @@ public class map extends BasicCommand {
                     }
                 });
             }
-            maps.put(mv.getId(), mv);
-            ItemStack mapItem = new ItemStack(Material.MAP, 1, mv.getId());
+            maps.put((short) mv.getId(), mv);
+            ItemStack mapItem = new ItemStack(Material.MAP, 1, (short) mv.getId());
             p.getInventory().addItem(mapItem);
         } catch (MalformedURLException ex) {
             error(p, "Invalid URL!");

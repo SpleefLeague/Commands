@@ -17,9 +17,9 @@ import com.spleefleague.core.plugin.CorePlugin;
 import com.spleefleague.core.utils.DatabaseConnection;
 import com.spleefleague.core.utils.UtilChat;
 import java.util.UUID;
-import org.apache.commons.lang3.tuple.Pair;
 import org.bson.Document;
 import org.bukkit.command.CommandSender;
+import org.bukkit.craftbukkit.libs.org.apache.commons.lang3.tuple.Pair;
 
 /**
  *
