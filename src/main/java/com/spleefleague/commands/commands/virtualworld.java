@@ -88,7 +88,7 @@ public class virtualworld extends BasicCommand {
         boolean senderIncluded = false;
         for (Player player : players) {
             senderIncluded = (senderIncluded) || (player == s);
-            this.fwm.addWorld(player, world, priority);
+            this.fwm.addWorld(player.getUniqueId(), world, priority);
         }
         if (!senderIncluded) {
             success(s, "The players have been added");
@@ -105,7 +105,7 @@ public class virtualworld extends BasicCommand {
         boolean senderIncluded = false;
         for (Player player : players) {
             senderIncluded = (senderIncluded) || (player == s);
-            this.fwm.removeWorld(player, world);
+            this.fwm.removeWorld(player.getUniqueId(), world);
             success(player, "You have been removed from " + name);
         }
         if (!senderIncluded) {

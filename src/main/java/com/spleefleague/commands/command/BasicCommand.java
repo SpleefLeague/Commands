@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import org.apache.commons.lang.StringUtils;
+import org.bukkit.Location;
 import org.bukkit.command.BlockCommandSender;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -71,6 +72,30 @@ public abstract class BasicCommand extends DispatchableCommand implements Comman
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
+        // Hacky way around not having CommandHook anymore
+        for (int i = 0; i < args.length; i++) {
+            if (args[i].equals("@p") || args[i].equals("@s")) {
+                if (sender instanceof Player) {
+                    args[i] = ((Player) sender).getName();
+                } else if (sender instanceof BlockCommandSender) {
+                    Player closest = null;
+                    double closestDist = 0;
+                    Location blockLoc = ((BlockCommandSender) sender).getBlock().getLocation();
+                    for (Player player : ((BlockCommandSender) sender).getBlock().getWorld().getPlayers()) {
+                        double dist = player.getLocation().distance(blockLoc);
+                        if (closest == null || dist < closestDist) {
+                            closest = player;
+                            closestDist = dist;
+                        }
+                    }
+                    if (closest != null) {
+                        args[i] = closest.getName();
+                    } else {
+                        return false;
+                    }
+                }
+            }
+        }
         try {
             if (sender instanceof Player) {
                 Player p = (Player) sender;
