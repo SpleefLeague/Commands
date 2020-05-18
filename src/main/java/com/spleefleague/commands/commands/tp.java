@@ -37,4 +37,5 @@ public class tp extends BasicCommand {
         }
         slp.teleport(target, TeleportCause.COMMAND);
     }
+    
 }

@@ -270,3 +270,15 @@ commands:
         description: Sets or unsets a checkpoint
         usage: |
           /<command> <target> [x, y, z, yaw, pitch] [duration]
+    sudo:
+        description: Sudo command
+        usage: |
+          /<command>
+    marry:
+        description: Marry another player!
+        usage: |
+          /<command> <player>
+    sit:
+        description: Sit somewhere!
+        usage: |
+          /<command>
