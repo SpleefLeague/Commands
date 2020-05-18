@@ -262,21 +262,6 @@ commands:
         aliases: []
         usage: |
             /<command> <player> <currency type> <amount>
-    fakeentity:
-        description: 'A command to work with fake entities'
-        aliases: [fe]
-        usage: |
-            /<command>
-    virtualblock:
-        description: Manage virtual blocks
-        aliases: [vb]
-        usage: |
-          /<command> <set> <world> <x> <y> <z> <material> [data]
-    virtualworld:
-        description: Manage virtual worlds
-        aliases: [vw]
-        usage: |
-          /<command> <create|delete|add|remove> <world> [players]
     checkpoint:
         description: Teleports you back to your last checkpoint
         usage: |
