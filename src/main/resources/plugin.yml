@@ -282,3 +282,7 @@ commands:
         description: Sit somewhere!
         usage: |
           /<command>
+    recording:
+        description: A command record players, and replay their movement
+        usage: |
+            /<command> [start|stop] <player>
